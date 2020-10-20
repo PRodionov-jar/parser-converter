@@ -19,10 +19,10 @@ public class ParserFactory {
     }
 
     public static Parser getParser(String fileName) {
-        String fieType = ParserUtils.getParserTypeByFileName(fileName);
-        Parser parser = parsersCache.get(fieType);
+        String fileType = ParserUtils.getParserTypeByFileName(fileName);
+        Parser parser = parsersCache.get(fileType);
         if (parser == null) {
-            throw new RuntimeException("Unknown service type: " + fieType);
+            throw new RuntimeException("Unknown file type: " + fileType);
         }
         return parser;
     }
