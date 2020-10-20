@@ -27,7 +27,7 @@ import static com.example.converter.utils.ParserUtils.FILE_IS_EMPTY;
 import static com.example.converter.utils.ParserUtils.JSON_IS_INVALID;
 
 @Service
-public class OrderParserJson implements Parser {
+public final class OrderParserJson implements Parser {
 
     private ForkJoinPool forkJoinPool;
     private ObjectMapper jsonMapper;

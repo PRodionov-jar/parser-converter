@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class ParserUtils {
+public final class ParserUtils {
 
     private static final String FILE_FORMAT_NOT_SPECIFIED = "File format not specified";
     public static final String FILE_IS_EMPTY = "File is empty";

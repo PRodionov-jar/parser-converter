@@ -21,7 +21,7 @@ import java.util.stream.StreamSupport;
 import static com.example.converter.utils.ParserUtils.COLUMNS_COUNT_IS_INVALID;
 
 @Service
-public class OrderParserCsv implements Parser {
+public final class OrderParserCsv implements Parser {
 
     private ForkJoinPool forkJoinPool;
 

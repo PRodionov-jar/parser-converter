@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class ConverterUtils {
+public final class ConverterUtils {
 
     public static final String RESULT_OK = "OK";
     public static final String NOT_SPECIFIED = " not specified";
