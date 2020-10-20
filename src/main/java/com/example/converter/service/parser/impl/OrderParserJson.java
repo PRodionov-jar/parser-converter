@@ -42,6 +42,7 @@ public class OrderParserJson implements Parser {
     public List<OrderOut> doParse(String fileName) throws Exception {
         BufferedReader input = ParserUtils.readFileContent(fileName);
         String data = input.lines().collect(Collectors.joining());
+        input.close();
         if (data.isEmpty()) {
             throw new ParserException(FILE_IS_EMPTY);
         }

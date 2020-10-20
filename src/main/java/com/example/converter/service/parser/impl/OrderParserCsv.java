@@ -34,7 +34,7 @@ public class OrderParserCsv implements Parser {
     public List<OrderOut> doParse(String fileName) throws Exception {
         BufferedReader input = ParserUtils.readFileContent(fileName);
         Iterable<CSVRecord> records = CSVFormat.EXCEL.parse(input);
-
+        input.close();
         return forkJoinPool.submit(() -> StreamSupport.stream(records.spliterator(), true)
                 .map(record -> parseRecord(record, fileName))
                 .collect(Collectors.toList())).join();
